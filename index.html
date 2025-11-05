@@ -7,26 +7,30 @@
   <title>Tasteology | The Science of Cooking</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
+  <header role="banner">
     <h1>Tasteology</h1>
   </header>
 
-  <main>
-    <!-- Gallery Block -->
-    <section class="gallery-block">
+  <main role="main">
+    <!-- ===== GALLERY BLOCK ===== -->
+    <section class="gallery-block" aria-labelledby="gallery-heading">
       <div class="gallery-grid">
         <div class="gallery-left">
-          <img src="images/Gallery-Block-IMG-1.png" alt="Cooking on fire" />
+          <img src="images/Gallery-Block-IMG-1.png"
+               alt="Chef cooking over open flame" />
         </div>
 
         <div class="gallery-mid">
-          <img src="images/Gallery-Block-IMG-2.png" alt="Chef preparing" class="top-img" />
-          <img src="images/Gallery-Block-IMG-3.jpg" alt="Eggs in carton" class="bottom-img" />
+          <img src="images/Gallery-Block-IMG-2.png"
+               alt="Chef slicing fresh ingredients" class="top-img" />
+          <img src="images/Gallery-Block-IMG-3.jpg"
+               alt="Carton of eggs used in cooking experiments" class="bottom-img" />
         </div>
 
         <div class="gallery-text">
-          <h2>What Does Cooking Mean?</h2>
+          <h2 id="gallery-heading">What Does Cooking Mean?</h2>
           <hr />
           <p>
             Is it simply applying heat to a food product? A way of making certain food safe to eat?
@@ -34,47 +38,50 @@
             the father of molecular gastronomy, has dedicated his life to finding out.
           </p>
           <p>
-            We spoke to him to find out what his experiments have told him. And in the process even discovered
-            the secret to cooking the perfect egg...
+            We spoke to him to find out what his experiments have told him — and in the process even discovered
+            the secret to cooking the perfect egg…
           </p>
           <h3 class="accent">The Perfect Egg</h3>
           <p class="highlight">
-            <strong>Keep water between 67 and 68°C for a flavourful, tender yolk.</strong>
+            <strong>Keep water between 67 and 68 °C for a flavourful, tender yolk.</strong>
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Cards Block -->
-    <section class="cards-block">
-      <h2>Taste the Colours</h2>
+    <!-- ===== CARDS BLOCK ===== -->
+    <section class="cards-block" aria-labelledby="cards-heading">
+      <h2 id="cards-heading">Taste the Colours</h2>
       <div class="cards">
-        <div class="card">
-          <img src="images/Card-Block-IMG-1.jpg" alt="Red taste example" />
+        <article class="card">
+          <img src="images/Card-Block-IMG-1.jpg" alt="Red fruits suggesting sweetness" />
           <h3>Red</h3>
           <p>Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.</p>
-        </div>
-        <div class="card">
-          <img src="images/Card-Block-IMG-2.jpg" alt="Green taste example" />
+        </article>
+
+        <article class="card">
+          <img src="images/Card-Block-IMG-2.jpg" alt="Green fruits suggesting sourness" />
           <h3>Green</h3>
           <p>Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours.</p>
-        </div>
-        <div class="card">
-          <img src="images/Card-Block-IMG-3.jpg" alt="White taste example" />
+        </article>
+
+        <article class="card">
+          <img src="images/Card-Block-IMG-3.jpg" alt="White food suggesting savoury flavour" />
           <h3>White</h3>
           <p>White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.</p>
-        </div>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>Built by Rodney Aure · © 2025 Tasteology</p>
+  <footer role="contentinfo">
+    <p>Built by <span lang="en">Rodney Aure</span> · © 2025 Tasteology</p>
   </footer>
 
-  <!-- Lightbox Modal -->
-  <div id="modal" class="modal" role="dialog" aria-modal="true">
-    <span class="close" role="button" aria-label="Close">&times;</span>
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h2 id="modal-title" class="visually-hidden">Expanded gallery image</h2>
+    <button class="close" aria-label="Close image viewer">&times;</button>
     <img class="modal-content" id="modal-img" alt="Expanded gallery image" />
   </div>
 
