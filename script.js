@@ -1,36 +1,37 @@
-// script.js
+// Accessible lightbox modal
 document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   const modalImg = document.getElementById('modal-img');
   const closeBtn = document.querySelector('.close');
+  const galleryImgs = document.querySelectorAll('.gallery-grid img');
+  let lastFocused = null;
 
-  // open modal on click
-  document.querySelectorAll('.gallery-grid img').forEach(img => {
+  // Open modal
+  galleryImgs.forEach(img => {
     img.addEventListener('click', () => {
+      lastFocused = document.activeElement;
       modal.classList.add('show');
+      modal.style.display = 'flex';
       modalImg.src = img.src;
+      closeBtn.focus();
       document.body.style.overflow = 'hidden';
     });
   });
 
-  // close modal
-  closeBtn.addEventListener('click', () => {
+  // Close modal function
+  function closeModal() {
     modal.classList.remove('show');
+    modal.style.display = 'none';
     document.body.style.overflow = '';
-  });
+    if (lastFocused) lastFocused.focus();
+  }
 
-  // click outside or press ESC
+  // Close button & ESC
+  closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', e => {
-    if (e.target === modal) {
-      modal.classList.remove('show');
-      document.body.style.overflow = '';
-    }
+    if (e.target === modal) closeModal();
   });
-
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      modal.classList.remove('show');
-      document.body.style.overflow = '';
-    }
+    if (e.key === 'Escape') closeModal();
   });
 });
