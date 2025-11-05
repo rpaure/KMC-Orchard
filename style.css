@@ -1,4 +1,4 @@
-/* ========== Base ========== */
+/* Base */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -18,7 +18,25 @@ header {
   border-bottom: 1px solid #333;
 }
 
-/* ========== Gallery Block ========== */
+/* Keyboard focus visible */
+:focus {
+  outline: 3px solid #e14d4d;
+  outline-offset: 3px;
+}
+
+/* Visually hidden (for aria-labels/headings) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Gallery */
 .gallery-block {
   padding: 3rem 5%;
 }
@@ -31,7 +49,6 @@ header {
   align-items: stretch;
 }
 
-/* Left large image spans 2 rows */
 .gallery-left img {
   width: 100%;
   height: 100%;
@@ -40,7 +57,6 @@ header {
   border-radius: 4px;
 }
 
-/* Middle column: stacked top/bottom */
 .gallery-mid {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -53,48 +69,39 @@ header {
   border-radius: 4px;
 }
 
-/* Text column */
 .gallery-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   line-height: 1.6;
 }
-
 .gallery-text hr {
   border: none;
   border-top: 1px solid #444;
   margin: 1rem 0;
 }
-
 .accent {
-  color: #d9463b;
+  color: #e14d4d;
   font-weight: bold;
   text-transform: uppercase;
   margin-top: 1rem;
 }
-
 .highlight {
   font-weight: bold;
+  color: #fff;
 }
 
-/* ========== Cards Block ========== */
+/* Cards */
 .cards-block {
   padding: 3rem 5%;
   text-align: center;
 }
-
-.cards-block h2 {
-  margin-bottom: 2rem;
-}
-
 .cards {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .card {
   background-color: #1b1f1f;
   border-radius: 4px;
@@ -102,179 +109,88 @@ header {
   width: 300px;
   text-align: center;
 }
-
 .card img {
   width: 100%;
   border-radius: 4px;
 }
-
 .card h3 {
   margin-top: 1rem;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .card p {
   color: #ccc;
 }
 
-/* ========== Lightbox ========== */
+/* Modal / Lightbox */
 .modal {
   display: none;
   position: fixed;
   z-index: 999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
   background-color: rgba(0,0,0,0.85);
   align-items: center;
   justify-content: center;
 }
-
 .modal-content {
-  margin: auto;
-  display: block;
   max-width: 80%;
   max-height: 80%;
   border-radius: 6px;
-  transition: transform 0.3s ease;
 }
-
-.modal-content:hover {
-  transform: scale(1.02);
-}
-
 .close {
   position: absolute;
-  top: 20px;
-  right: 35px;
+  top: 20px; right: 35px;
+  background: none;
+  border: none;
   color: #fff;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: 2.2rem;
   cursor: pointer;
 }
 
-/* Fade-in */
-.modal.show {
-  display: flex;
-  animation: fadeIn 0.3s ease forwards;
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-
-/* ========== Responsive Design ========== */
-
-/* Tablet View (max-width: 1024px)
-   - Stack gallery text below images
-   - Keep images in a 2-column layout (large image + stacked column)
-*/
+/* Responsive */
 @media (max-width: 1024px) {
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
   }
-
-  /* Large image spans full width on first row */
-  .gallery-left {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  .gallery-mid {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-  }
-
   .gallery-text {
     grid-column: 1 / 3;
-    grid-row: 2 / 3;
     margin-top: 1.5rem;
     text-align: center;
   }
-
-  .gallery-text hr {
-    margin: 0.8rem auto;
-    width: 60%;
-  }
 }
-
-/* Mobile View (max-width: 768px)
-   - Stack all gallery images vertically
-   - Text follows below
-   - Cards stack in a single column
-*/
 @media (max-width: 768px) {
   .gallery-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  .gallery-left,
-  .gallery-mid {
+  .gallery-left, .gallery-mid {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-
-  .gallery-left img,
-  .gallery-mid img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-
   .gallery-text {
     width: 90%;
     text-align: center;
-    margin-top: 1.5rem;
   }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-    max-width: 350px;
-  }
+  .cards { flex-direction: column; align-items: center; }
+  .card { width: 90%; max-width: 350px; }
 }
-
-/* Small Mobile View (max-width: 480px)
-   - Tighten spacing and font sizes for smaller screens
-*/
 @media (max-width: 480px) {
-  body {
-    font-size: 0.95rem;
-  }
-
-  h1 {
-    font-size: 1.2rem;
-  }
-
-  .gallery-text h2 {
-    font-size: 1.4rem;
-  }
-
-  .gallery-block {
-    padding: 2rem 1rem;
-  }
-
-  .cards-block {
-    padding: 2rem 1rem 3rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-  }
+  body { font-size: 0.95rem; }
+  h1 { font-size: 1.2rem; }
+  .gallery-text h2 { font-size: 1.4rem; }
+  footer { font-size: 0.8rem; }
 }
