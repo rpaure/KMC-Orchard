@@ -74,7 +74,9 @@ line-height: .900rem;
 
 /* Responsive */
 @media (max-width: 1336px) {
-.gallery-mid img{height: auto; }
+.gallery-mid img{display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;}
 }
 @media (max-width: 1024px) {
   .gallery-grid {
@@ -119,6 +121,7 @@ line-height: .900rem;
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
 
 
 
