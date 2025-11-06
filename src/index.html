@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Tasteology - Exploring the science and beauty of cooking." />
+  <meta name="keywords" content="cooking, gastronomy, taste, recipes, food science" />
+  <meta name="author" content="Rodney Aure" />
+
+  <title>Tasteology | The Science of Cooking</title>
+
+  <!-- Styles -->
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/gallery.css" />
+	<link rel="stylesheet" href="styles/modal.css" />
+	<link rel="stylesheet" href="styles/cards.css" />
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header role="banner" class="banner">
+    <h1 id="site-title">Tasteology</h1>
+	<h2 id="site-Description">Exploring the science, art, and emotion behind every flavour.</h2>
+  </header>
+
+  <main role="main">
+    <!-- ===== GALLERY BLOCK ===== -->
+    <section class="gallery-block" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading" class="visually-hidden">Gallery</h2>  
+      <div class="gallery-grid">
+        <div class="gallery-left">
+          <img src="images/Gallery-Block-IMG-1.png"
+               alt="Chef cooking over open flame" data-desc="Chef perfecting a dish over an open flame." /> <!-- added desc -->
+        </div>
+
+        <div class="gallery-mid">
+          <img src="images/Gallery-Block-IMG-2.png"
+               alt="Chef slicing fresh ingredients" class="top-img" data-desc="Precision slicing for presentation." />
+          <img src="images/Gallery-Block-IMG-3.jpg"
+               alt="Carton of eggs used in cooking experiments" class="bottom-img" data-desc="Eggs used for temperature-based experiments." />
+        </div>
+
+        <div class="gallery-text">
+          <h2>What Does Cooking Mean?</h2>
+          <hr />
+          <p>
+            Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...
+          </p><br>
+          <p><strong><span>The Perfect Egg</span></strong></p>
+          <p>
+            <strong>Keep water between 67 and 68 °C for a flavourful, tender yolk.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CARDS BLOCK ===== -->
+    <section class="cards-block" aria-labelledby="cards-heading">
+      <h2 id="cards-heading">Taste the Colours</h2>
+      <div class="cards">
+        <a href="#" class="card" target="_blank" rel="noopener noreferrer">
+          <img src="images/Card-Block-IMG-1.jpg" alt="Red fruits suggesting sweetness" />
+          <h3>Red</h3>
+          <p>Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.</p>
+        </a>
+
+        <a href="#" class="card" target="_blank" rel="noopener noreferrer">
+          <img src="images/Card-Block-IMG-2.jpg" alt="Green fruits suggesting sourness" />
+          <h3>Green</h3>
+          <p>Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours.</p>
+        </a>
+
+        <a href="#" class="card" target="_blank" rel="noopener noreferrer">
+          <img src="images/Card-Block-IMG-3.jpg" alt="White food suggesting savoury flavour" />
+          <h3>White</h3>
+          <p>White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Built by <span lang="en">Rodney Aure</span> · © 2025 Tasteology</p>
+  </footer>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <h2 id="modal-title" class="visually-hidden">Expanded gallery image</h2>
+    <button class="close" aria-label="Close image viewer">&times;</button>
+    <img class="modal-content" id="modal-img" alt="Expanded gallery image" />
+    <p id="modal-desc" class="modal-desc"></p>  
+  </div>
+
+	 <!-- JS -->
+ 	<script src="js/modal.js"></script>
+	<script src="js/cardlog.js"></script>
+</body>
+</html>

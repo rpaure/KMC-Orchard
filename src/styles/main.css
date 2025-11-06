@@ -1,0 +1,80 @@
+/*main.css*/
+/* Base */
+body {
+font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  background-color: #0f1414;
+  color: #d9d9d9;
+}
+
+/* Header settings */
+header {
+text-align: center;
+height: 100px;
+padding: 1rem;
+background: #222c2c;
+}
+
+/* Banner Text Settings */
+.banner h1{
+color: #fff;
+font-weight: 600!important;
+font-size: 2rem;
+line-height: 1rem;
+}
+
+.banner h2{
+color: #fff;
+font-weight: 300;
+font-size: 1.2rem;
+}
+
+/* footer settings */
+footer{
+	text-align: center;
+	vertical-align: middle;
+	height: 60px;
+	background: #060808;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer p{
+	color: #5b5b5b;
+	font-size: .890rem;
+}
+/* Header Text settings */
+ h1,h2, h3 {
+  color: #fff;
+  font-weight: 300;
+}
+
+/* Keyboard focus visible */
+:focus {
+  outline: 3px solid #e14d4d;
+  outline-offset: 3px;
+}
+
+/* Visually hidden (for aria-labels/headings) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+body { font-size: 0.95rem; }
+header {height: 120px;}
+h1 { font-size: 1.2rem; }
+footer { font-size: 0.8rem; }
+}
