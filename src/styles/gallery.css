@@ -46,6 +46,7 @@ font-weight: 700;
   object-fit: cover;
   grid-row: 1 / span 2;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .gallery-mid {
@@ -60,6 +61,7 @@ font-weight: 700;
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 
@@ -178,6 +180,7 @@ font-weight: 700;
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
 
 
 
