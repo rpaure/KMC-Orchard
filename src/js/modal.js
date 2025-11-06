@@ -37,20 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Scroll animation trigger for gallery and card blocks
-document.addEventListener('DOMContentLoaded', () => {
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // only animate once
-      }
-    });
-  }, { threshold: 0.2 });
-
-  animatedElements.forEach(el => observer.observe(el));
-});
 
 
