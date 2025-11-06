@@ -174,10 +174,11 @@ font-weight: 700;
 }
 @media (max-width: 480px) {
 .gallery-block {padding: 1rem 5%;}
-.gallery-text h2 { font-size: 1.4rem; text-align: left;}
+.gallery-text h2 { font-size: 1.4rem; text-align: center;}
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
 
 
 
