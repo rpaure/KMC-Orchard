@@ -1,17 +1,15 @@
-/* gallery.css */
-/* -----------------------------
-   Gallery Text Styling
------------------------------ */
-.gallery-text h2 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 1.8rem;
-  line-height: 2.1rem;
-  text-transform: uppercase;
-  margin: 0;
+/* gallery.css*/
+/* Gallery Text Settings*/
+.gallery-text h2{
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.8rem;
+	line-height: 2.1rem;
+	text-transform: uppercase;
+	margin: 0;
 }
 
-.gallery-text p {
+.gallery-text p{
   color: #fff;
   font-weight: 300;
   font-size: 1.3rem;
@@ -19,8 +17,8 @@
   margin: 0;
 }
 
-.gallery-text strong {
-  font-weight: 700;
+.gallery-text strong{
+font-weight: 700;
 }
 
 .gallery-text span {
@@ -30,9 +28,7 @@
   line-height: .900rem;
 }
 
-/* -----------------------------
-   Gallery Layout
------------------------------ */
+/* Gallery Container */
 .gallery-block {
   padding: 3rem 15%;
 }
@@ -54,6 +50,7 @@
 
 .gallery-mid {
   display: grid;
+  grid-auto-flow: row;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
 }
@@ -65,23 +62,20 @@
   border-radius: 4px;
 }
 
+
 .gallery-text {
-  grid-column: 3 / 4; /* ✅ ensures text stays in third column */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  
 }
-
 .gallery-text hr {
   border: none;
   border-top: 1px solid #fff;
   margin: 1.8rem 0;
 }
 
-/* -----------------------------
-   Responsive Adjustments
------------------------------ */
-
+/* Responsive */
 /* ----------- Desktop & iPad Pro Landscape (≥1025px to 1366px) ----------- */
 @media (min-width: 1025px) and (max-width: 1366px) {
   .gallery-grid {
@@ -184,3 +178,17 @@
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
