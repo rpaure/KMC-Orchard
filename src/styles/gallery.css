@@ -86,13 +86,14 @@ line-height: .900rem;
   }
 
  .gallery-left, .gallery-mid {
-    width: 100%; 
+    width: 100%;
+	 height: auto;
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 .gallery-mid img{
-	height: 100%;
+	height: auto;
     object-fit: cover;}
 }
 @media (max-width: 768px) {
@@ -119,6 +120,7 @@ line-height: .900rem;
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
 
 
 
