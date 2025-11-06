@@ -83,7 +83,7 @@ font-weight: 700;
 @media (max-width: 1024px) {
 .gallery-left img,
 .gallery-mid img {
-    height: auto!important;       
+    height: auto;       
     max-width: 100%;      
     object-fit: cover;   
   }
@@ -135,6 +135,7 @@ font-weight: 700;
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
 
 
 
