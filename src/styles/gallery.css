@@ -57,6 +57,7 @@ line-height: .900rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  grid-row: 1 / span 2;
   border-radius: 4px;
 }
 
@@ -91,7 +92,7 @@ line-height: .900rem;
     gap: 1rem;
   }
 .gallery-mid img{
-	height: 50%;
+	height: 100%;
     object-fit: cover;}
 }
 @media (max-width: 768px) {
@@ -118,6 +119,7 @@ line-height: .900rem;
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
 
 
 
