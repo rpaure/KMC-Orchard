@@ -52,6 +52,18 @@ a.card :hover{
   border-radius: 4px;
 }
 
+/* Animation Motion for card hover */
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
 /* Responsive */
 
 @media (max-width: 768px) {
@@ -70,4 +82,5 @@ a.card :hover{
 .cards-block {padding: 1rem 10%;}
 .cards-block h2{ font-size: 1.4rem; }
 }
+
 
