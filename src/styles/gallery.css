@@ -76,42 +76,43 @@ font-weight: 700;
 }
 
 /* Responsive */
+/* ----------- Desktop & iPad Pro Landscape (≥1025px to 1366px) ----------- */
 @media (min-width: 1025px) and (max-width: 1366px) {
   .gallery-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* ✅ 3 columns: left, mid, text */
+    grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: auto;
-    align-items: start;
+    align-items: stretch; 
     gap: 1.5rem;
   }
 
-  .gallery-left {
-    grid-column: 1 / 2;
+  .gallery-left,
+  .gallery-mid,
+  .gallery-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%;
   }
 
-  .gallery-mid {
-    grid-column: 2 / 3;
-    display: grid;
-    grid-auto-flow: row;
-    gap: 1rem;
-  }
-
+  .gallery-left img,
   .gallery-mid img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;           
+    object-fit: cover;       
     display: block;
   }
 
-  /* ✅ Text sits beside images (3rd column) */
+  .gallery-mid {
+    gap: 1rem;
+  }
+
   .gallery-text {
-    grid-column: 3 / 4;
-    grid-row: 1;
-    align-self: center;
     text-align: left;
-    padding-left: 1rem;
+    padding: 1rem;
     font-size: clamp(1rem, 1.8vw, 1.25rem);
     line-height: 1.5;
+    box-sizing: border-box;
   }
 }
 
@@ -177,6 +178,7 @@ font-weight: 700;
 .gallery-text p{ font-size: 1.1rem; text-align: justify;}
 strong{font-weight: 700;}
 }
+
 
 
 
